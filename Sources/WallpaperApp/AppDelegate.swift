@@ -32,8 +32,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func loadSavedVideo() {
-        guard let url = playerManager?.savedURL else { return }
+        let url = playerManager?.savedURL ?? bundledDefaultVideo()
+        guard let url else { return }
         wallpaperWindows.forEach { $0.setupPlayerLayer(with: url) }
+    }
+
+    private func bundledDefaultVideo() -> URL? {
+        Bundle.main.url(forResource: "default-wallpaper", withExtension: "mp4")
     }
 
     private func observeVideoChanges() {
