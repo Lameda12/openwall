@@ -2,11 +2,10 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var playerManager: PlayerManager
-    @State private var selectedFile: URL?
 
     var body: some View {
         VStack(spacing: 16) {
-            Text("WallpaperApp")
+            Text("openwall")
                 .font(.headline)
 
             HStack(spacing: 8) {
@@ -25,6 +24,12 @@ struct ContentView: View {
 
             if let url = playerManager.currentVideoURL {
                 Text(url.lastPathComponent)
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .lineLimit(1)
+                    .truncationMode(.middle)
+            } else {
+                Text("No video selected")
                     .font(.caption)
                     .foregroundColor(.gray)
             }

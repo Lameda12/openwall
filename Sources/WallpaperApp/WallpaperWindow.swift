@@ -19,7 +19,6 @@ class WallpaperWindow: NSWindow {
         )
 
         setupWindow()
-        setupPlayerLayer()
     }
 
     required init?(coder: NSCoder) {
@@ -48,12 +47,12 @@ class WallpaperWindow: NSWindow {
         )
     }
 
-    private func setupPlayerLayer() {
+    func setupPlayerLayer(with url: URL) {
         guard let contentView = contentView else { return }
 
-        let testURL = URL(fileURLWithPath: "/Users/amadi/Downloads/abi-toads-terrarium.1920x1080.mp4")
-        let player = playerManager.createPlayer(for: testURL)
+        let player = playerManager.createPlayer(for: url)
 
+        playerLayer?.removeFromSuperlayer()
         playerLayer = AVPlayerLayer(player: player)
         playerLayer?.frame = contentView.bounds
         playerLayer?.videoGravity = .resizeAspectFill
