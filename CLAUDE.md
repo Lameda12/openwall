@@ -1,7 +1,7 @@
-# CLAUDE.md — macOS Live Wallpaper App
+# CLAUDE.md — openwall: macOS Live Wallpaper
 
 ## Project
-Open-source live wallpaper app for macOS. Working name: TBD.
+Open-source live wallpaper app for macOS. Name: openwall.
 Target: feature parity with wallspace.app — 4K video behind desktop icons, <2% CPU,
 multi-monitor, custom MP4 import, battery-aware pause, menu bar control.
 Distribution: DMG via GitHub Releases + Homebrew Cask.

@@ -1,4 +1,4 @@
-# WallpaperApp — macOS Live Wallpaper
+# openwall — macOS Live Wallpaper
 
 Lightweight open-source live wallpaper app for macOS. Play MP4 videos behind desktop icons with <2% CPU usage.
 
