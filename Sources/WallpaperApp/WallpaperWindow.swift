@@ -15,8 +15,7 @@ class WallpaperWindow: NSWindow {
             contentRect: frame,
             styleMask: [],
             backing: .buffered,
-            defer: false,
-            screen: screen
+            defer: false
         )
 
         setupWindow()
@@ -36,7 +35,7 @@ class WallpaperWindow: NSWindow {
         isReleasedWhenClosed = false
         animationBehavior = .none
 
-        let contentView = NSView(frame: frame)
+        let contentView = NSView(frame: targetScreen.frame)
         contentView.autoresizesSubviews = true
         contentView.wantsLayer = true
         self.contentView = contentView
