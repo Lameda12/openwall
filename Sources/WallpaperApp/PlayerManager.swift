@@ -15,6 +15,9 @@ class PlayerManager: NSObject, ObservableObject {
 
         players.append(player)
         loopers.append(looper)
+
+        player.play()
+        isPlaying = true
         return player
     }
 

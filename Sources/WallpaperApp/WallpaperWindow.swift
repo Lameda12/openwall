@@ -51,7 +51,7 @@ class WallpaperWindow: NSWindow {
     private func setupPlayerLayer() {
         guard let contentView = contentView else { return }
 
-        let testURL = URL(fileURLWithPath: "/tmp/test.mp4")
+        let testURL = URL(fileURLWithPath: "/Users/amadi/Documents/swift-app-projects/raiden-shogun-thunder-empress.1920x1080.mp4")
         let player = playerManager.createPlayer(for: testURL)
 
         playerLayer = AVPlayerLayer(player: player)
